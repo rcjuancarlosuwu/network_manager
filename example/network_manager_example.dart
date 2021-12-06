@@ -14,10 +14,4 @@ Future<void> main() async {
       .listen((isOnline) => logResult(isOnline));
 }
 
-void logResult(bool isOnline) {
-  if (isOnline) {
-    log('We are online! 😎');
-  } else {
-    log('We are offline... 😓');
-  }
-}
+void logResult(bool isOnline) => log(isOnline ? 'We are online! 😎' : 'We are offline... 😓');

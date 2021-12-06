@@ -1,4 +1,4 @@
-Inspired by NoScopeDevs [network_manager](https://github.com/NoScopeDevs/network_manager) implementation using internet_connection_checker
+Inspired by NoScopeDevs [network_manager](https://github.com/NoScopeDevs/network_manager) implementation using internet_connection_checker instead of data_connection_checker.
 
 [![Dart](https://github.com/JuanCarlosRC/network_manager/actions/workflows/dart.yml/badge.svg)](https://github.com/JuanCarlosRC/network_manager/actions/workflows/dart.yml)
 
@@ -20,13 +20,7 @@ Future<void> main() async {
       .listen((isOnline) => logResult(isOnline));
 }
 
-void logResult(bool isOnline) {
-  if (isOnline) {
-    log('We are online! 😎');
-  } else {
-    log('We are offline... 😓');
-  }
-}
+void logResult(bool isOnline) => log(isOnline ? 'We are online! 😎' : 'We are offline... 😓');
 ```
 
 
